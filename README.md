@@ -1,4 +1,4 @@
-<h1 align="center">Call Pixabay API & Represent in UI.</h1>h1>
+<h1 align="center">⭐ Call Pixabay API & Represent in UI.⭐ </h1>
 <div align="center">
   <img src="https://github.com/harshdusane2103/Api_Pixbay_Ecommrce_recipe/blob/master/pixabay.png" width=21%,height=35%,>
 </div>
