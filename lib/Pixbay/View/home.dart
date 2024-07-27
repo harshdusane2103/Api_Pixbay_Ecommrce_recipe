@@ -1,5 +1,7 @@
-import 'package:api_pixbay/Modal/modal.dart';
-import 'package:api_pixbay/Provider/Api_Provider.dart';
+
+import 'package:api_pixbay/Pixbay/Modal/modal.dart';
+import 'package:api_pixbay/Pixbay/Provider/Api_Provider.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

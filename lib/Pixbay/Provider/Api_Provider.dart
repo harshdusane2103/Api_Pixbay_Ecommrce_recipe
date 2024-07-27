@@ -1,6 +1,7 @@
 
-import 'package:api_pixbay/API/Helper.dart';
-import 'package:api_pixbay/Modal/modal.dart';
+
+import 'package:api_pixbay/Pixbay/API/Helper.dart';
+import 'package:api_pixbay/Pixbay/Modal/modal.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeProvider extends ChangeNotifier

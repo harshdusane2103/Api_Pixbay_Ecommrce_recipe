@@ -1,5 +1,6 @@
-import 'package:api_pixbay/Provider/Api_Provider.dart';
-import 'package:api_pixbay/View/home.dart';
+import 'package:api_pixbay/Pixbay/Provider/Api_Provider.dart';
+import 'package:api_pixbay/Pixbay/View/home.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
