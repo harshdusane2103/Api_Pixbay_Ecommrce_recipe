@@ -1,5 +1,6 @@
-import 'package:api_pixbay/Pixbay/Provider/Api_Provider.dart';
-import 'package:api_pixbay/Pixbay/View/home.dart';
+
+import 'package:api_pixbay/Recipe/Provider/provider_recipe.dart';
+import 'package:api_pixbay/Recipe/View/Recipe_Home.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -12,11 +13,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context)=>HomeProvider(),
+    return MultiProvider(providers: [
+        ChangeNotifierProvider(
+        create: (context)=>RecipesProvider(),),
+    ],
+
       builder:(context,child)=> MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomeScreen(),
+        // home: HomeScreen(),
+        routes: {
+          '/':(context)=>RecipeHomeScreen(),
+        },
       ),
     );
   }

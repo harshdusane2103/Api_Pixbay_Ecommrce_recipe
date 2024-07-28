@@ -38,7 +38,8 @@ class HomeScreen extends StatelessWidget {
                     child: Container(
                       height: 50,
                       width: 300,
-                      child: TextField(
+                      child:
+                      TextField(
                         onSubmitted: (value) {
                           homeProviderfalse.SearchImage(txtSearch.text);
 
@@ -85,7 +86,8 @@ class HomeScreen extends StatelessWidget {
                                   '${search.hits[index].webformatURL}'),),),
                         )),
                   );
-                } else {
+                }
+                else {
                   return Center(
                     child: CircularProgressIndicator(),
                   );
