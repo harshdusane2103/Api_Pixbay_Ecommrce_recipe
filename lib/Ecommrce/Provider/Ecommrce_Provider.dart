@@ -1,11 +1,11 @@
-
 import 'package:api_pixbay/Ecommrce/API/Ecommrce_Api.dart';
 import 'package:api_pixbay/Ecommrce/Modal/Ecommrce_Modal.dart';
 import 'package:flutter/material.dart';
 
-class RecipesProvider extends ChangeNotifier {
+class EcommerceProvider extends ChangeNotifier {
   EcommerceModal? ecommerceModal;
-ApiEcommerceHelper apiEcommerceHelper=ApiEcommerceHelper();
+  List cartList=[];
+  ApiEcommerceHelper apiEcommerceHelper = ApiEcommerceHelper();
   int selectIndex = 0;
   int pageValue = 0;
 
@@ -40,3 +40,4 @@ void setPageValue(int value) {
   pageValue = value;
   notifyListeners();
 }
+
