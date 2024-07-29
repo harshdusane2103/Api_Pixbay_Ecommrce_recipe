@@ -1,6 +1,8 @@
 
+import 'package:api_pixbay/Ecommrce/Provider/Ecommrce_Provider.dart';
 import 'package:api_pixbay/Pixbay/Modal/modal.dart';
 import 'package:api_pixbay/Pixbay/Provider/Api_Provider.dart';
+import 'package:api_pixbay/Pixbay/View/detail.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +29,8 @@ class HomeScreen extends StatelessWidget {
           ),
 
         ),
-        body:Column(
+        body:
+        Column(
           children: [
 
               Row(
@@ -75,15 +78,21 @@ class HomeScreen extends StatelessWidget {
                     child: ListView.builder(
                       shrinkWrap: true,
                         itemCount: search!.hits.length,
-                        itemBuilder: (context, index) => Container(
-                          margin: EdgeInsets.all(10),
-                          height: 200,
-                          width: 360,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  '${search.hits[index].webformatURL}'),),),
+                        itemBuilder: (context, index) => InkWell(
+                        onTap: () {
+                          selectedIndex=index;
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PixbayDetailScreen()));
+                        },
+                          child: Container(
+                            margin: EdgeInsets.all(10),
+                            height: 200,
+                            width: 360,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                    '${search.hits[index].webformatURL}'),),),
+                          ),
                         )),
                   );
                 }

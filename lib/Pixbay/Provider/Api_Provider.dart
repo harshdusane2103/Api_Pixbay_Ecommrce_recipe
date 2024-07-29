@@ -8,12 +8,20 @@ class HomeProvider extends ChangeNotifier
 {
   PixabayModal? pixabayModal;
   String search="";
+  int selectedIndex=0;
 
   void SearchImage(String img)
   {
     search = img;
     notifyListeners();
   }
+  void SelectedImage(int index)
+  {
+    selectedIndex =index;
+    notifyListeners();
+  }
+
+
 
   Future<PixabayModal?> fromMap(String img)
   async {
